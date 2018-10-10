@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn'	=> '',
-    'hostname' => 'nelsonl1.mysql.db.internal',
-    'username' => 'nelsonl1_thepla',
-    'password' => 'zUn7RfKE',
-    'database' => 'nelsonl1_theplan',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => 'idb123$$',
+    'database' => 'theplan',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => False,
