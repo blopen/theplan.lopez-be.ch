@@ -235,3 +235,26 @@ INFO - 2018-10-10 18:16:24 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.
 INFO - 2018-10-10 18:16:24 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer.php
 INFO - 2018-10-10 18:16:24 --> Final output sent to browser
 DEBUG - 2018-10-10 18:16:24 --> Total execution time: 0.3890
+ERROR - 2018-10-10 18:28:30 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\GibbThePlan\theplan.lopez-be.ch\application\vendor/autoload.php was not found.
+INFO - 2018-10-10 18:28:30 --> Config Class Initialized
+INFO - 2018-10-10 18:28:30 --> Hooks Class Initialized
+DEBUG - 2018-10-10 18:28:30 --> UTF-8 Support Enabled
+INFO - 2018-10-10 18:28:30 --> Utf8 Class Initialized
+INFO - 2018-10-10 18:28:30 --> URI Class Initialized
+DEBUG - 2018-10-10 18:28:30 --> No URI present. Default controller set.
+INFO - 2018-10-10 18:28:30 --> Router Class Initialized
+INFO - 2018-10-10 18:28:30 --> Output Class Initialized
+INFO - 2018-10-10 18:28:30 --> Security Class Initialized
+DEBUG - 2018-10-10 18:28:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 18:28:30 --> Input Class Initialized
+INFO - 2018-10-10 18:28:30 --> Language Class Initialized
+INFO - 2018-10-10 18:28:30 --> Loader Class Initialized
+INFO - 2018-10-10 18:28:30 --> Helper loaded: url_helper
+INFO - 2018-10-10 18:28:30 --> Helper loaded: file_helper
+INFO - 2018-10-10 18:28:30 --> Helper loaded: date_helper
+INFO - 2018-10-10 18:28:30 --> Helper loaded: number_helper
+INFO - 2018-10-10 18:28:30 --> Database Driver Class Initialized
+ERROR - 2018-10-10 18:28:30 --> Severity: Warning --> mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  C:\xampp\htdocs\GibbThePlan\theplan.lopez-be.ch\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2018-10-10 18:28:30 --> Severity: Warning --> mysqli::real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: No such host is known.  C:\xampp\htdocs\GibbThePlan\theplan.lopez-be.ch\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2018-10-10 18:28:30 --> Unable to connect to the database
+INFO - 2018-10-10 18:28:30 --> Language file loaded: language/english/db_lang.php
