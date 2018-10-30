@@ -62,6 +62,8 @@ class Register extends CI_Controller {
             $result = $this -> email -> send();
 			//echo $this -> email -> print_debugger();
 			//echo var_dump($result);
+			echo $message;
+			die;
 
 			if ($message != null && $result) {
 				$this -> load -> view('layout/Header_login');
