@@ -20,12 +20,10 @@ namespace ScriptGenerator
             var filename = "script.sql";
             filename =  DateTime.Now.ToString(dateFileFormat) +".sql";
             txtDestination.Text = Environment.GetEnvironmentVariable("tmp") + "\\" + filename;
-            appendEnd = Environment.GetEnvironmentVariable("tmp") + "\\" + filename + 2;
-
 
         }
 
-        private string appendEnd = 
+    
 
         private string dateFormat = "yyyy-MM-dd hh:mm:ss";
         private string dateFileFormat = "yyyy-MM-dd_hh-mm-ss";
@@ -88,8 +86,8 @@ namespace ScriptGenerator
                         var weight = random.Next(100) + 20;
                    
                         Insert($"{setTable} VALUES ('{setId}'+{setStartId},'{weight}','{repetition}','{excersie}')");
-                        
-                        Insert($"{sessionSetTable} VALUES ('{sessionId}'+{sessionStartId},'{setId}'+{setStartId})");
+
+						InsertEnd($"`session_set` (`session_id`, `set_id`) VALUES ('{sessionId}'+{sessionStartId},'{setId}'+{setStartId})");
                         setId++;
                     }
              
@@ -103,6 +101,7 @@ namespace ScriptGenerator
                 File.Delete(txtDestination.Text);
                 File.WriteAllText(txtDestination.Text, "");
                 File.AppendAllText(txtDestination.Text, sb.ToString());
+				File.AppendAllText(txtDestination.Text, sbEnd.ToString());
             }
             catch(Exception ex)
             {
@@ -116,9 +115,15 @@ namespace ScriptGenerator
             sb.Append(insertInto + text + "; "+ Environment.NewLine);
         }
 
-   
+		private void InsertEnd(string text, bool withInsert = true)
+		{
+			var insertInto = (withInsert) ? "INSERT INTO " : "";
+			sbEnd.Append(insertInto + text + "; " + Environment.NewLine);
+		}
 
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+
+
+		private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
 
         }

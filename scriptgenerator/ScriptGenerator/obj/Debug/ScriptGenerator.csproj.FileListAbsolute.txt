@@ -7,3 +7,12 @@ C:\Users\vmadmin\Documents\Github\ScriptGenerator\ScriptGenerator\obj\Debug\Scri
 C:\Users\vmadmin\Documents\Github\ScriptGenerator\ScriptGenerator\obj\Debug\ScriptGenerator.csproj.GenerateResource.Cache
 C:\Users\vmadmin\Documents\Github\ScriptGenerator\ScriptGenerator\obj\Debug\ScriptGenerator.exe
 C:\Users\vmadmin\Documents\Github\ScriptGenerator\ScriptGenerator\obj\Debug\ScriptGenerator.pdb
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\obj\Debug\ScriptGenerator.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\obj\Debug\ScriptGenerator.Form1.resources
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\obj\Debug\ScriptGenerator.Properties.Resources.resources
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\obj\Debug\ScriptGenerator.csproj.GenerateResource.Cache
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\obj\Debug\ScriptGenerator.exe
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\obj\Debug\ScriptGenerator.pdb
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\bin\Debug\ScriptGenerator.exe.config
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\bin\Debug\ScriptGenerator.exe
+C:\xampp\htdocs\theplan.lopez-be.ch\scriptgenerator\ScriptGenerator\bin\Debug\ScriptGenerator.pdb
