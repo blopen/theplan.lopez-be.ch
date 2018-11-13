@@ -42,6 +42,11 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+    <!-- Material icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -173,7 +178,6 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= base_url() . index_page(); ?>Profile"><i class="fa fa-circle-o"></i>Edit</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>Upgrade</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -188,8 +192,6 @@
         </li>
         <li class="treeview">
         </li>
-        
-        <li class="header">function</li>
         <li><a href="<?= base_url() . index_page(); ?>/Home/logout"><i class="fa fa-circle-o text-red"></i> <span>Logout</span></a></li>
       </ul>
     </section>

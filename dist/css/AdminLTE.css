@@ -355,7 +355,7 @@ a:focus {
     top: 0;
     right: 0;
     float: none;
-    background: #d2d6de;
+    background: white;
     padding-left: 10px;
   }
   .content-header > .breadcrumb li:before {
