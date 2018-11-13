@@ -1,4 +1,9 @@
-
+ol.breadcrumb {
+    background: white !important;
+}
+body{
+    font-family: "Helvetica Neue";
+}
 .login-page,.register-page{
     background: #0bea43;
 }
@@ -67,5 +72,15 @@ a.sidebar-toggle:hover {
     margin: 0 1px;
     background: #23a042 !important;
 }
+@media (max-width: 991px) {
+    .content-header > .breadcrumb {
+        background: white !important;
+    }
+}
+.breadcrumb {
+    background: white !important;
+}
+
+
 
 

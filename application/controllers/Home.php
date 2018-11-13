@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 		$this -> load -> model('File_M', '', TRUE);
 		$this -> load -> model('Upload_M', '', TRUE);
 		$this -> load -> model('Download_M', '', TRUE);
-		$this -> load -> model('Object_M', '', TRUE);
+		$this -> load -> model('Session_M', '', TRUE);
 		$this -> load -> helper('form');
 		$this -> load -> helper('url');
 		$this -> load -> library('session', 'form_validation');
@@ -31,8 +31,10 @@ class Home extends CI_Controller {
 		$data['lastname'] = $session_data['lastname'];
 		$data['log_date'] = $session_data['log_date'];
 		$id = $session_data['id'];
+        $data['session'] = $this->Session_M->getAllSession();
 		$this -> load -> view('layout/Header', $data);
-		$this -> load -> view('authentication/Welcome');
+		$this -> load -> view('authentication/Home');
+        $this -> load -> view('authentication/PlusButton');
 		$this -> load -> view('layout/Footer');
         //
 	}
