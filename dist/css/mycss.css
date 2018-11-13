@@ -1,3 +1,6 @@
 .touch {
     cursor: pointer;
 }
+ol.breadcrumb {
+    background: white !important;
+}
