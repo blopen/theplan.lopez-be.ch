@@ -59,11 +59,11 @@ class Register extends CI_Controller {
 			$this -> email -> bcc('');
 			$this -> email -> subject('Completed regristition for Cloudly');
 			$this -> email -> message($message);
-            $result = $this -> email -> send();
+            $this -> email -> send();
 			//echo $this -> email -> print_debugger();
 			//echo var_dump($result);
 
-			if ($message != null && $result) {
+			if ($message != null) {
 				$this -> load -> view('layout/Header_login');
 				$this -> load -> view('authentication/Login');
 				$this -> load -> view('layout/Footer_login');
