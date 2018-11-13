@@ -235,6 +235,7 @@ INFO - 2018-10-10 18:16:24 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.
 INFO - 2018-10-10 18:16:24 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer.php
 INFO - 2018-10-10 18:16:24 --> Final output sent to browser
 DEBUG - 2018-10-10 18:16:24 --> Total execution time: 0.3890
+<<<<<<< HEAD
 ERROR - 2018-10-10 18:28:30 --> $config['composer_autoload'] is set to TRUE but C:\xampp\htdocs\GibbThePlan\theplan.lopez-be.ch\application\vendor/autoload.php was not found.
 INFO - 2018-10-10 18:28:30 --> Config Class Initialized
 INFO - 2018-10-10 18:28:30 --> Hooks Class Initialized
@@ -1135,3 +1136,282 @@ INFO - 2018-10-10 19:16:04 --> File loaded: C:\xampp\htdocs\GibbThePlan\theplan.
 INFO - 2018-10-10 19:16:04 --> File loaded: C:\xampp\htdocs\GibbThePlan\theplan.lopez-be.ch\application\views\layout/Footer_login.php
 INFO - 2018-10-10 19:16:04 --> Final output sent to browser
 DEBUG - 2018-10-10 19:16:04 --> Total execution time: 0.0947
+=======
+ERROR - 2018-10-10 19:27:50 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:27:50 --> Config Class Initialized
+INFO - 2018-10-10 19:27:50 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:27:50 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:27:50 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:27:50 --> URI Class Initialized
+DEBUG - 2018-10-10 19:27:50 --> No URI present. Default controller set.
+INFO - 2018-10-10 19:27:50 --> Router Class Initialized
+INFO - 2018-10-10 19:27:50 --> Output Class Initialized
+INFO - 2018-10-10 19:27:50 --> Security Class Initialized
+DEBUG - 2018-10-10 19:27:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:27:50 --> Input Class Initialized
+INFO - 2018-10-10 19:27:50 --> Language Class Initialized
+INFO - 2018-10-10 19:27:50 --> Loader Class Initialized
+INFO - 2018-10-10 19:27:50 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:27:50 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:27:50 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:27:50 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:27:50 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:27:50 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:27:50 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:27:50 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:27:50 --> Controller Class Initialized
+INFO - 2018-10-10 19:27:50 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header_login.php
+INFO - 2018-10-10 19:27:50 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Login.php
+INFO - 2018-10-10 19:27:50 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer_login.php
+INFO - 2018-10-10 19:27:50 --> Final output sent to browser
+DEBUG - 2018-10-10 19:27:50 --> Total execution time: 0.0702
+ERROR - 2018-10-10 19:28:23 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:28:23 --> Config Class Initialized
+INFO - 2018-10-10 19:28:23 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:28:23 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:28:23 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:28:23 --> URI Class Initialized
+INFO - 2018-10-10 19:28:23 --> Router Class Initialized
+INFO - 2018-10-10 19:28:23 --> Output Class Initialized
+INFO - 2018-10-10 19:28:23 --> Security Class Initialized
+DEBUG - 2018-10-10 19:28:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:28:23 --> Input Class Initialized
+INFO - 2018-10-10 19:28:23 --> Language Class Initialized
+INFO - 2018-10-10 19:28:23 --> Loader Class Initialized
+INFO - 2018-10-10 19:28:23 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:28:23 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:28:23 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:28:23 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:28:23 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:28:23 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:28:23 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:28:23 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:28:23 --> Controller Class Initialized
+INFO - 2018-10-10 19:28:23 --> Model "User_M" initialized
+DEBUG - 2018-10-10 19:28:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-10 19:28:23 --> Form_validation class already loaded. Second attempt ignored.
+INFO - 2018-10-10 19:28:23 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2018-10-10 19:28:23 --> Session class already loaded. Second attempt ignored.
+INFO - 2018-10-10 19:28:23 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header_login.php
+INFO - 2018-10-10 19:28:23 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Login.php
+INFO - 2018-10-10 19:28:23 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer_login.php
+INFO - 2018-10-10 19:28:23 --> Final output sent to browser
+DEBUG - 2018-10-10 19:28:23 --> Total execution time: 0.1009
+ERROR - 2018-10-10 19:28:29 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:28:29 --> Config Class Initialized
+INFO - 2018-10-10 19:28:29 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:28:29 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:28:29 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:28:29 --> URI Class Initialized
+INFO - 2018-10-10 19:28:29 --> Router Class Initialized
+INFO - 2018-10-10 19:28:29 --> Output Class Initialized
+INFO - 2018-10-10 19:28:29 --> Security Class Initialized
+DEBUG - 2018-10-10 19:28:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:28:29 --> Input Class Initialized
+INFO - 2018-10-10 19:28:29 --> Language Class Initialized
+INFO - 2018-10-10 19:28:29 --> Loader Class Initialized
+INFO - 2018-10-10 19:28:29 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:28:29 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:28:29 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:28:29 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:28:29 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:28:29 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:28:29 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:28:29 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:28:29 --> Controller Class Initialized
+DEBUG - 2018-10-10 19:28:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2018-10-10 19:28:29 --> Model "User_M" initialized
+INFO - 2018-10-10 19:28:29 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header_login.php
+INFO - 2018-10-10 19:28:29 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Register.php
+INFO - 2018-10-10 19:28:29 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer_login.php
+INFO - 2018-10-10 19:28:29 --> Helper loaded: directory_helper
+INFO - 2018-10-10 19:28:29 --> Final output sent to browser
+DEBUG - 2018-10-10 19:28:29 --> Total execution time: 0.0901
+ERROR - 2018-10-10 19:28:34 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:28:34 --> Config Class Initialized
+INFO - 2018-10-10 19:28:34 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:28:34 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:28:34 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:28:34 --> URI Class Initialized
+INFO - 2018-10-10 19:28:34 --> Router Class Initialized
+INFO - 2018-10-10 19:28:34 --> Output Class Initialized
+INFO - 2018-10-10 19:28:34 --> Security Class Initialized
+DEBUG - 2018-10-10 19:28:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:28:34 --> Input Class Initialized
+INFO - 2018-10-10 19:28:34 --> Language Class Initialized
+ERROR - 2018-10-10 19:28:34 --> 404 Page Not Found: Loginhtml/index
+ERROR - 2018-10-10 19:28:40 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:28:40 --> Config Class Initialized
+INFO - 2018-10-10 19:28:40 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:28:40 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:28:40 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:28:40 --> URI Class Initialized
+DEBUG - 2018-10-10 19:28:40 --> No URI present. Default controller set.
+INFO - 2018-10-10 19:28:40 --> Router Class Initialized
+INFO - 2018-10-10 19:28:40 --> Output Class Initialized
+INFO - 2018-10-10 19:28:40 --> Security Class Initialized
+DEBUG - 2018-10-10 19:28:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:28:40 --> Input Class Initialized
+INFO - 2018-10-10 19:28:40 --> Language Class Initialized
+INFO - 2018-10-10 19:28:40 --> Loader Class Initialized
+INFO - 2018-10-10 19:28:40 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:28:40 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:28:40 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:28:40 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:28:40 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:28:40 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:28:41 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:28:41 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:28:41 --> Controller Class Initialized
+INFO - 2018-10-10 19:28:41 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header_login.php
+INFO - 2018-10-10 19:28:41 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Login.php
+INFO - 2018-10-10 19:28:41 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer_login.php
+INFO - 2018-10-10 19:28:41 --> Final output sent to browser
+DEBUG - 2018-10-10 19:28:41 --> Total execution time: 0.0803
+ERROR - 2018-10-10 19:50:59 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:50:59 --> Config Class Initialized
+INFO - 2018-10-10 19:50:59 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:50:59 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:50:59 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:50:59 --> URI Class Initialized
+INFO - 2018-10-10 19:50:59 --> Router Class Initialized
+INFO - 2018-10-10 19:50:59 --> Output Class Initialized
+INFO - 2018-10-10 19:50:59 --> Security Class Initialized
+DEBUG - 2018-10-10 19:50:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:50:59 --> Input Class Initialized
+INFO - 2018-10-10 19:50:59 --> Language Class Initialized
+INFO - 2018-10-10 19:50:59 --> Loader Class Initialized
+INFO - 2018-10-10 19:50:59 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:50:59 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:50:59 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:50:59 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:50:59 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:50:59 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:50:59 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:50:59 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:50:59 --> Controller Class Initialized
+INFO - 2018-10-10 19:50:59 --> Model "User_M" initialized
+DEBUG - 2018-10-10 19:50:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-10 19:50:59 --> Form_validation class already loaded. Second attempt ignored.
+INFO - 2018-10-10 19:50:59 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2018-10-10 19:50:59 --> Session class already loaded. Second attempt ignored.
+ERROR - 2018-10-10 19:50:59 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:50:59 --> Config Class Initialized
+INFO - 2018-10-10 19:50:59 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:50:59 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:50:59 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:50:59 --> URI Class Initialized
+INFO - 2018-10-10 19:50:59 --> Router Class Initialized
+INFO - 2018-10-10 19:50:59 --> Output Class Initialized
+INFO - 2018-10-10 19:50:59 --> Security Class Initialized
+DEBUG - 2018-10-10 19:50:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:50:59 --> Input Class Initialized
+INFO - 2018-10-10 19:50:59 --> Language Class Initialized
+INFO - 2018-10-10 19:50:59 --> Loader Class Initialized
+INFO - 2018-10-10 19:50:59 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:50:59 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:50:59 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:50:59 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:50:59 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:50:59 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:50:59 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:50:59 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:50:59 --> Controller Class Initialized
+INFO - 2018-10-10 19:50:59 --> Model "User_M" initialized
+INFO - 2018-10-10 19:50:59 --> Model "Folder_M" initialized
+INFO - 2018-10-10 19:50:59 --> Model "File_M" initialized
+INFO - 2018-10-10 19:50:59 --> Model "Upload_M" initialized
+INFO - 2018-10-10 19:50:59 --> Model "Download_M" initialized
+INFO - 2018-10-10 19:50:59 --> Model "Object_M" initialized
+DEBUG - 2018-10-10 19:50:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-10 19:50:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2018-10-10 19:50:59 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header.php
+INFO - 2018-10-10 19:50:59 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Welcome.php
+INFO - 2018-10-10 19:50:59 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer.php
+INFO - 2018-10-10 19:50:59 --> Final output sent to browser
+DEBUG - 2018-10-10 19:50:59 --> Total execution time: 0.1061
+ERROR - 2018-10-10 19:51:06 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:51:06 --> Config Class Initialized
+INFO - 2018-10-10 19:51:06 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:51:06 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:51:06 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:51:06 --> URI Class Initialized
+INFO - 2018-10-10 19:51:06 --> Router Class Initialized
+INFO - 2018-10-10 19:51:06 --> Output Class Initialized
+INFO - 2018-10-10 19:51:06 --> Security Class Initialized
+DEBUG - 2018-10-10 19:51:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:51:06 --> Input Class Initialized
+INFO - 2018-10-10 19:51:06 --> Language Class Initialized
+INFO - 2018-10-10 19:51:06 --> Loader Class Initialized
+INFO - 2018-10-10 19:51:06 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:51:06 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:51:06 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:51:06 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:51:06 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:51:06 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:51:06 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:51:06 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:51:06 --> Controller Class Initialized
+INFO - 2018-10-10 19:51:06 --> Model "User_M" initialized
+INFO - 2018-10-10 19:51:06 --> Model "Folder_M" initialized
+INFO - 2018-10-10 19:51:06 --> Model "File_M" initialized
+INFO - 2018-10-10 19:51:06 --> Model "Upload_M" initialized
+INFO - 2018-10-10 19:51:06 --> Model "Download_M" initialized
+INFO - 2018-10-10 19:51:06 --> Model "Object_M" initialized
+DEBUG - 2018-10-10 19:51:06 --> Session class already loaded. Second attempt ignored.
+ERROR - 2018-10-10 19:51:06 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 19:51:06 --> Config Class Initialized
+INFO - 2018-10-10 19:51:06 --> Hooks Class Initialized
+DEBUG - 2018-10-10 19:51:06 --> UTF-8 Support Enabled
+INFO - 2018-10-10 19:51:06 --> Utf8 Class Initialized
+INFO - 2018-10-10 19:51:06 --> URI Class Initialized
+INFO - 2018-10-10 19:51:06 --> Router Class Initialized
+INFO - 2018-10-10 19:51:06 --> Output Class Initialized
+INFO - 2018-10-10 19:51:06 --> Security Class Initialized
+DEBUG - 2018-10-10 19:51:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 19:51:06 --> Input Class Initialized
+INFO - 2018-10-10 19:51:06 --> Language Class Initialized
+INFO - 2018-10-10 19:51:06 --> Loader Class Initialized
+INFO - 2018-10-10 19:51:06 --> Helper loaded: url_helper
+INFO - 2018-10-10 19:51:06 --> Helper loaded: file_helper
+INFO - 2018-10-10 19:51:06 --> Helper loaded: date_helper
+INFO - 2018-10-10 19:51:06 --> Helper loaded: number_helper
+INFO - 2018-10-10 19:51:06 --> Database Driver Class Initialized
+INFO - 2018-10-10 19:51:06 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 19:51:06 --> Helper loaded: form_helper
+INFO - 2018-10-10 19:51:06 --> Form Validation Class Initialized
+INFO - 2018-10-10 19:51:06 --> Controller Class Initialized
+INFO - 2018-10-10 19:51:06 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header_login.php
+INFO - 2018-10-10 19:51:06 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Login.php
+INFO - 2018-10-10 19:51:06 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer_login.php
+INFO - 2018-10-10 19:51:06 --> Final output sent to browser
+DEBUG - 2018-10-10 19:51:06 --> Total execution time: 0.1054
+ERROR - 2018-10-10 20:28:38 --> $config['composer_autoload'] is set to TRUE but /home/nelsonl1/www/theplan.lopez-be.ch/application/vendor/autoload.php was not found.
+INFO - 2018-10-10 20:28:38 --> Config Class Initialized
+INFO - 2018-10-10 20:28:38 --> Hooks Class Initialized
+DEBUG - 2018-10-10 20:28:38 --> UTF-8 Support Enabled
+INFO - 2018-10-10 20:28:38 --> Utf8 Class Initialized
+INFO - 2018-10-10 20:28:38 --> URI Class Initialized
+DEBUG - 2018-10-10 20:28:38 --> No URI present. Default controller set.
+INFO - 2018-10-10 20:28:38 --> Router Class Initialized
+INFO - 2018-10-10 20:28:38 --> Output Class Initialized
+INFO - 2018-10-10 20:28:38 --> Security Class Initialized
+DEBUG - 2018-10-10 20:28:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2018-10-10 20:28:38 --> Input Class Initialized
+INFO - 2018-10-10 20:28:38 --> Language Class Initialized
+INFO - 2018-10-10 20:28:38 --> Loader Class Initialized
+INFO - 2018-10-10 20:28:38 --> Helper loaded: url_helper
+INFO - 2018-10-10 20:28:38 --> Helper loaded: file_helper
+INFO - 2018-10-10 20:28:38 --> Helper loaded: date_helper
+INFO - 2018-10-10 20:28:38 --> Helper loaded: number_helper
+INFO - 2018-10-10 20:28:38 --> Database Driver Class Initialized
+INFO - 2018-10-10 20:28:38 --> Session: Class initialized using 'files' driver.
+INFO - 2018-10-10 20:28:38 --> Helper loaded: form_helper
+INFO - 2018-10-10 20:28:38 --> Form Validation Class Initialized
+INFO - 2018-10-10 20:28:38 --> Controller Class Initialized
+INFO - 2018-10-10 20:28:38 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Header_login.php
+INFO - 2018-10-10 20:28:38 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/authentication/Login.php
+INFO - 2018-10-10 20:28:38 --> File loaded: /home/nelsonl1/www/theplan.lopez-be.ch/application/views/layout/Footer_login.php
+INFO - 2018-10-10 20:28:38 --> Final output sent to browser
+DEBUG - 2018-10-10 20:28:38 --> Total execution time: 0.1182
+>>>>>>> master
