@@ -55,9 +55,6 @@
 									<li class="list-group-item">
 										<b>Email:</b><a class="pull-right"><?=$email?></a>
 									</li>
-									<li class="list-group-item">
-										<b>Last Log Date:</b><a class="pull-right"><?=$log_date?></a>
-									</li>
 								</ul>
 								<a id="showPasswordChange" class="btn btn-primary btn-block"><b>Change Passwort</b></a>
 								<a id="showMailChange" class="btn btn-primary btn-block"><b>Change Mail</b></a>

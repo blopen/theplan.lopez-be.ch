@@ -23,8 +23,8 @@ class VerifyLogin extends CI_Controller {
 			$this -> load -> view('authentication/Login');
 			$this -> load -> view('layout/Footer_login');
 		} else {
-
-			redirect(base_url() . index_page() . "Home");
+            $session_data = $this -> session -> userdata('userData');
+			redirect(base_url(). "Home/watch/".$session_data['id']);
 		}
 	}
 
@@ -35,10 +35,9 @@ class VerifyLogin extends CI_Controller {
 		//query the database
 		$result = $this -> User_M -> login($email, $password);
 		if ($result) {
-			$sess_array = array();
 			foreach ($result as $row) {
-				$sess_array = array('id' => $row -> id, 'email' => $row -> email, 'firstname' => $row -> firstname, 'lastname' => $row -> lastname, 'log_date' => $row -> log_date, );
-				$this -> session -> set_userdata('logged_in', $sess_array);
+				$sessarray = array('id' => $row -> id, 'email' => $row -> email, 'firstname' => $row -> firstname, 'lastname' => $row -> lastname, 'log_date' => $row -> log_date, );
+				$this -> session -> set_userdata('userData', $sessarray);
 			}
 			return TRUE;
 		} else {

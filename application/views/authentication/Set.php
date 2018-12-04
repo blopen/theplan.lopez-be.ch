@@ -16,26 +16,42 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <a href="Set">
+
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">Sets</h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
-                            <table class="table table-bordered">
+                        <div class="box-body table-responsive">
+                            <table class="table table-bordered x">
                                 <tbody>
                                 <tr>
                                     <th>Setname</th>
+                                    <th>Description</th>
                                     <th>Repiations</th>
                                     <th>Wighth</th>
                                 </tr>
-                                <?php for($i=0;$i < 10 ;$i++ ){ ?>
+                                <?php foreach ($set as $key => $value) { ?>
                                     <tr>
-                                        <td>Stemmen</td>
-                                        <td>20</td>
+                                        <td><?= $value['name'] ?></td>
+                                        <td><?= $value['description'] ?></td>
+                                        <td><?= $value['repetition'] ?></td>
                                         <td>
-                                            500 Kg
+                                            <?= $value['weight'] ?> Kg
+                                        </td>
+                                        <td>
+                                            <a href="https://theplan.lopez-be.ch/Set/delete/<?=$value['set_id']?>/<?=$session[0]['id']?>">
+                                                <i class="material-icons">
+                                                    delete
+                                                </i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://theplan.lopez-be.ch/Set/watch/<?=$value['set_id']?>/<?=$session[0]['id']?>">
+                                                <i class="material-icons " >
+                                                    visibility
+                                                </i>
+                                            </a>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -53,7 +69,7 @@
                             </ul>
                         </div>-->
                     </div>
-                </a>
+               
             </div>
         </div>
         <!-- /.info-box edit -->
@@ -64,7 +80,7 @@
     <!-- /.content -->
 </div>
 <style>
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
         i.material-icons {
             font-size: -webkit-xxx-large;
             position: relative;
@@ -102,8 +118,9 @@
 <script>
     $(document).ready(function () {
         console.log("ready!");
-        $('#plusBtn').click(function () {
-            alert("Handler for .click() called.");
+        var id = <?=$session[0]['id']?>;
+        $('#plusSetBtn').click(function () {
+            window.location = 'https://theplan.lopez-be.ch/Set/add/' + id;
         });
         $(function () {
             $("#datepicker").datepicker();

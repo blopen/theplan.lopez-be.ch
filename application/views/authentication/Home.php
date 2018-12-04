@@ -2,12 +2,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Sassion
+            Session
             <small>Traning panel</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Theplan</a></li>
-            <li class="active">Sassions</li>
+            <li class="active">Secccssions</li>
         </ol>
     </section>
 
@@ -15,7 +15,6 @@
     <section class="content">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-            <?=var_dump($session[0]['date']);?>
         <?php foreach($session as $key => $value){ ?>
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="info-box">
@@ -29,7 +28,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-3 text-right">
 
-                        <a>
+                        <a href="https://theplan.lopez-be.ch/Sessions/delete/<?=$value['id']?>">
                             <i class="material-icons">
                                 delete
                             </i>
@@ -38,7 +37,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-3 text-right">
 
-                        <a href="Sessions/watch/<?=$value['id']?>">
+                        <a href="https://theplan.lopez-be.ch/Sessions/edit/<?=$value['id']?>">
                             <i class="material-icons " >
                                 visibility
                             </i>
@@ -79,7 +78,7 @@
     $( document ).ready(function() {
         console.log( "ready!" );
         $( '#plusBtn' ).click(function() {
-            window.location="Sessions";
+            window.location="https://theplan.lopez-be.ch/Sessions";
         });
     });
 </script>

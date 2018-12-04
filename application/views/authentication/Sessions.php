@@ -2,20 +2,20 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Sassion add
+            Session add
             <small>Traning panel</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Theplan</a></li>
-            <li class="active">Sassions add</li>
+            <li class="active">Sessions add</li>
         </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
         <!-- Small boxes (Stat box) -->
+        <?=var_dump($session)?>
         <div class="row">
-            <?=var_dump($session);?>
             <form name ="sessionadd" action="https://theplan.lopez-be.ch/Sessions/add" method="post">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="info-box">
@@ -25,7 +25,7 @@
                             <h3>Name</h3>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-left align-middle">
-                            <input name="name" type="text" placeholder=""  value="<?=$session['name']?>" class="form-control input-md">
+                            <input name="name" type="text" placeholder=""  value="<?=$session[0]['name']?>" class="form-control input-md">
                         </div>
                     </div>
                     <!-- /.info-box-content -->
@@ -41,7 +41,7 @@
                             <h3>Date</h3>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right align-middle">
-                            <input name="date" type="text" placeholder="" value="<?=$session['date']?>" class="form-control input-md" id="datepicker">
+                            <input name="date" type="text" placeholder="" value="<?=$session[0]['date']?>" class="form-control input-md" id="datepicker">
                         </div>
                     </div>
                     <!-- /.info-box-content -->
@@ -58,7 +58,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
                             <select name="motivation" class="" multiple="true">
-                                <option value="" disabled selected><?=$session['motivation']?></option>
+                                <option value="0" disabled selected><?=$session[0]['motivation']?></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -82,23 +82,23 @@
                     <span class="info-box-icon bg-green"><i class="material-icons">fastfood</i></span>
                     <div class="info-box-content">
                         <div class="col-md-6 col-sm-6 col-xs-6">
-                            <h3>Kalories</h3>
+                            <h3>Calories</h3>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right align-middle">
-                            <input name="kalories" type="text" placeholder="" value="<?=$session['kalories']?>" class="form-control input-md input-kalories">
+                            <input name="kalories" type="text" placeholder="" value="<?=$session[0]['kalories']?>" class="form-control input-md input-kalories">
                         </div>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
                 <!-- /.info-box -->
             </div>
-                <input name="id" type="text" style="visibility: hidden" placeholder="" value="<?=$session['id']?>" class="form-control input-md">
+                <input name="id" type="text" style="visibility: hidden" placeholder="" value="<?=$session[0]['id']?>" class="form-control input-md">
                 <input id="submitSessionAdd" style="visibility: hidden" placeholder="" type="submit" value="Submit">
             </form>
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <a href="https://theplan.lopez-be.ch/Set">
+                <a href="https://theplan.lopez-be.ch/Set/edit/<?=($session[0]['id']);?>">
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">Sets</h3>
@@ -112,12 +112,12 @@
                                     <th>Repiations</th>
                                     <th>Wighth</th>
                                 </tr>
-                                <?php for($i=0;$i < 10 ;$i++ ){ ?>
+                                <?php foreach($set as $key => $value){ ?>
                                 <tr>
-                                    <td>Stemmen</td>
-                                    <td>20</td>
+                                    <td><?=$value['name']?></td>
+                                    <td><?=$value['repetition']?></td>
                                     <td>
-                                        500 Kg
+                                        <?=$value['weight']?> Kg
                                     </td>
                                 </tr>
                                 <?php } ?>

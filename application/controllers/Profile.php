@@ -13,7 +13,7 @@ class Profile extends CI_Controller {
 	}
 
 	public function index() {
-		$session_data = $this -> session -> userdata('logged_in');
+		$session_data = $this -> session -> userdata('userData');
 		$data['email'] = $session_data['email'];
 		$data['firstname'] = $session_data['firstname'];
 		$data['lastname'] = $session_data['lastname'];
@@ -26,7 +26,7 @@ class Profile extends CI_Controller {
 	}
 
 	function changePassword() {
-		$session_data = $this -> session -> userdata('logged_in');
+		$session_data = $this -> session -> userdata('userData');
 		$this -> load -> library('form_validation');
 		$this -> load -> helper('form');
 		$this -> load -> model('User_M');
@@ -48,7 +48,7 @@ class Profile extends CI_Controller {
 
 	}
 	function changeMail() {
-		$session_data = $this -> session -> userdata('logged_in');
+		$session_data = $this -> session -> userdata('userData');
 		$this -> load -> library('form_validation');
 		$this -> load -> helper('form');
 		$this -> load -> model('User_M');
@@ -69,10 +69,10 @@ class Profile extends CI_Controller {
 
 	}
 		public function setProfileImage() { 
-		$session_data = $this -> session -> userdata('logged_in');
+		$session_data = $this -> session -> userdata('userData');
 		$input = $this -> input -> post("userfileimge");
-		die(var_dump($_POST));
-		/*set validation rules*/
+		var_dump($input);
+		die();
 		if($this -> Profile_M -> do_upload($input)){
 			echo 'done';
 		}else{
@@ -83,7 +83,7 @@ class Profile extends CI_Controller {
 	}
 
 	function check_database($password) {
-		$session_data = $this -> session -> userdata('logged_in');
+		$session_data = $this -> session -> userdata('userData');
 		$email = $session_data['email'];
 		$this -> load -> model('User_M');
 		

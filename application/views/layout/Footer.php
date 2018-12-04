@@ -1,8 +1,8 @@
 <footer class="main-footer">
-	<div class="pull-right hidden-xs">
-		<b>Version</b> 3.3.3
-	</div>
-	<strong>Copyright © 2016-2017 <a href="http://lopez-be.ch" target="blank">nelson lopez</a>.</strong>
+    <div class="pull-right hidden-xs">
+        <b>Version</b> 3.3.3
+    </div>
+    <strong>Copyright © 2016-2017 <a href="http://lopez-be.ch" target="blank">nelson lopez</a>.</strong>
 </footer>
 <!-- jQuery 2.2.0 -->
 <script src="<?=base_url()?>plugins/jQuery/jQuery-2.2.0.min.js"></script>

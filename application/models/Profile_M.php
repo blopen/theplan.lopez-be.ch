@@ -12,8 +12,7 @@ Class Profile_M extends CI_Model {
 			{
 				if ($dataElement['file_name'] != "") {/* wenn "Hauptdarsteller" nicht Nichts ist... */
 
-					$session_data = $this -> session -> userdata('logged_in');
-					$lastbuckets = $this -> session -> userdata('lastbucket');
+					$session_data = $this -> session -> userdata('userData');
 					$this -> load -> model('User_M');
 					echo $this -> User_M -> updateUserImage($dataElement['file_name'], $session_data['id']);
 
