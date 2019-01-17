@@ -1,4 +1,10 @@
 <?php
+/*
+    Aufgabe: Session ausgeben,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
@@ -16,14 +22,9 @@ class Home extends CI_Controller {
 		$this -> load -> helper('form');
 		$this -> load -> helper('url');
         $this->load->library('session');
-		/*debuggingtool: echo "<pre>";
-		var_dump($value["Size"]) lol;
-		die;*/
-
 	}
-
+    /*Default function: Ruf die benötigten Daten für die Tranings Session auf*/
 	function index() {
-		//$session_data = $this -> session -> userdata('logged_in');
         if(false)
         {
 
@@ -34,10 +35,9 @@ class Home extends CI_Controller {
             $session_data = $this -> session -> userdata('userData');
             redirect('Home/watch/'.$session_data['id']);
         }
-        //
 	}
+	/*Funktion zum betrachten der Session*/
     function watch($id) {
-        //$session_data = $this -> session -> userdata('logged_in');
         $this->load->library('session');
         $session_data = $this -> session -> userdata('userData');
         $data['email'] = $session_data['email'];
@@ -50,14 +50,12 @@ class Home extends CI_Controller {
         $this -> load -> view('authentication/Home');
         $this -> load -> view('authentication/PlusButton');
         $this -> load -> view('layout/Footer');
-        //
     }
-	
+    /*Funktion zum Ausloggen*/
 	function logout() {
 		$this -> session -> unset_userdata('userData');
 		session_destroy();
 		redirect('login', 'refresh');
 	}
-
 }
 ?>

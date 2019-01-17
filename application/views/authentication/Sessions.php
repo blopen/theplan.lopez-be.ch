@@ -3,10 +3,9 @@
     <section class="content-header">
         <h1>
             Session add
-            <small>Traning panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Theplan</a></li>
+            <li><a href="#"><i class="fa fa-calendar"></i> Theplan</a></li>
             <li class="active">Sessions add</li>
         </ol>
     </section>
@@ -14,7 +13,6 @@
     <!-- Main content -->
     <section class="content">
         <!-- Small boxes (Stat box) -->
-        <?=var_dump($session)?>
         <div class="row">
             <form name ="sessionadd" action="https://theplan.lopez-be.ch/Sessions/add" method="post">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -85,7 +83,7 @@
                             <h3>Calories</h3>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right align-middle">
-                            <input name="kalories" type="text" placeholder="" value="<?=$session[0]['kalories']?>" class="form-control input-md input-kalories">
+                            <input name="kalories" onkeypress="return isNumberKey(event)" type="text" placeholder="" value="<?=$session[0]['kalories']?>" class="form-control input-md input-kalories">
                         </div>
                     </div>
                     <!-- /.info-box-content -->
@@ -93,10 +91,20 @@
                 <!-- /.info-box -->
             </div>
                 <input name="id" type="text" style="visibility: hidden" placeholder="" value="<?=$session[0]['id']?>" class="form-control input-md">
+                <hr>
+                <hr>
+                <section class="content-header" <?=((!isset($session[0]['id'])) ? "style=\"visibility: hidden\"":0)?>>
+                    <h2>
+                        Show Sets of Session
+                    </h2>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Click on the Table to edit!</a></li>
+                    </ol>
+                </section>
                 <input id="submitSessionAdd" style="visibility: hidden" placeholder="" type="submit" value="Submit">
             </form>
         </div>
-        <div class="row">
+        <div class="row" <?=((!isset($session[0]['id'])) ? "style=\"visibility: hidden\"":0)?>>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <a href="https://theplan.lopez-be.ch/Set/edit/<?=($session[0]['id']);?>">
                     <div class="box">
@@ -193,7 +201,16 @@
 
 </style>
 <script>
+    function isNumberKey(evt)
+    {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
     $(document).ready(function () {
+
         console.log("ready!");
         $('#plusBtn').click(function () {
             alert("Handler for .click() called.");

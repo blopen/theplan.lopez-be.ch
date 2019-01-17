@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>theplan</title>
-  <link rel="icon" href="<?=base_url()?>favicon.ico" type="image/ico">
+    <link rel="icon" href="https://www.materialui.co/materialIcons/places/fitness_center_black_192x192.png" type="image/png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -16,6 +16,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="<?=base_url()?>dist/css/thepaln_lopez_be_ch.css">
+    <link rel="stylesheet" href="<?= base_url() ?>dist/css/mycss.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
   
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->

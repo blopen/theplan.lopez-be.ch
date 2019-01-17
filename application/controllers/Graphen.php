@@ -1,7 +1,12 @@
 <?php
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
+/*
+    Aufgabe: Char ausgeben,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 class Graphen extends CI_Controller {
     /*constructor for all uses elemets*/
 
@@ -17,13 +22,8 @@ class Graphen extends CI_Controller {
         $this -> load -> helper('url');
         $this -> load -> library('form_validation');
         $this->load->library('session');
-        //$this -> load -> database();
-        /*debuggingtool: echo "<pre>";
-        var_dump($value["Size"]) lol;
-        die;*/
-
     }
-
+    /*Default function: Ruf die benötigten Daten für den Char auf*/
     function index() {
 
         $session_data =  $_SESSION['userData'];
@@ -36,48 +36,6 @@ class Graphen extends CI_Controller {
         $this -> load -> view('layout/Header', $data);
         $this -> load -> view('authentication/Graphen');
         $this -> load -> view('layout/Footer');
-        //
-    }
-    function edit($id) {
-        if(!isset($id)) {
-            $id = $this->uri->segment(3);
-        }//set auch so machen
-        $session_data =$_SESSION['userData'];
-
-        $data['email'] = $session_data['email'];
-        $data['firstname'] = $session_data['firstname'];
-        $data['lastname'] = $session_data['lastname'];
-        $data['log_date'] = $session_data['log_date'];
-        $data['id']= $id;
-        $data['session'] = $this->Session_M->getSessionById($id);
-        $data['set'] = $this->Session_M->getExerciseOfSessionById($id);
-        var_dump($data);
-        $this -> load -> view('layout/Header', $data);
-        $this -> load -> view('authentication/Sessions');
-        $this -> load -> view('authentication/SaveButton');
-        $this -> load -> view('layout/Footer');
-        //
-    }
-
-    public function add() {
-        $sessionData = $this -> input -> post();
-        $sessionId = $this -> Session_M -> save($sessionData);
-        $this->edit($sessionId);
-
-
-    }
-    public function delete($sid) {
-        $result = $this -> Session_M -> delete($sid);
-        echo $result;
-        redirect('home');
-
-
-    }
-
-    function logout() {
-        $this -> session -> unset_userdata('logged_in');
-        session_destroy();
-        redirect('login', 'refresh');
     }
 
 }

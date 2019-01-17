@@ -1,7 +1,12 @@
 <?php
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
-
+/*
+    Aufgabe: Login verfifizierung,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 class VerifyLogin extends CI_Controller {
 
 	function __construct() {
@@ -9,7 +14,7 @@ class VerifyLogin extends CI_Controller {
 		$this -> load -> model('User_M', '', TRUE);
 		$this -> load -> library('session', 'form_validation');
 	}
-
+    /*Default function: Prüft daten des Login*/
 	function index() {
 		//This method will have the credentials validation
 		$this -> load -> library('form_validation');
@@ -27,7 +32,7 @@ class VerifyLogin extends CI_Controller {
 			redirect(base_url(). "Home/watch/".$session_data['id']);
 		}
 	}
-
+    /*Default function: Prüft daten des Login*/
 	function check_database($password) {
 		$email = $this -> input -> post('email');
 		$this -> load -> model('User_M');

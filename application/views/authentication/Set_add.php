@@ -6,7 +6,7 @@
             <small><?= $session['name'] ?></small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> <?= $session['name'] ?></a></li>
+            <li><a href="#"><i class="fa fa-calendar"></i> <?= $session['name'] ?></a></li>
             <li class="active">Sassions add</li>
         </ol>
     </section>
@@ -15,8 +15,6 @@
     <section class="content">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-
-            <?= $session_id; ?>
             <form name="sessionadd" action="https://theplan.lopez-be.ch/Set/save" method="post">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="info-box">
@@ -57,7 +55,7 @@
                                 <h3>Repetation</h3>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6 text-right align-middle">
-                                <input name="repetition" type="text" placeholder="" value="<?= $set['repetition'] ?>"
+                                <input name="repetition" onkeypress="return isNumberKey(event)" type="text" placeholder="" value="<?= $set['repetition'] ?>"
                                        class="form-control input-md input-kalories">
                             </div>
                         </div>
@@ -73,7 +71,7 @@
                                 <h3>weight</h3>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6 text-right align-middle">
-                                <input name="weight" type="text" placeholder="" value="<?= $set['weight'] ?>"
+                                <input name="weight" onkeypress="return isNumberKey(event)" type="text" placeholder="" value="<?= $set['weight'] ?>"
                                        class="form-control input-md input-kalories">
                             </div>
                         </div>
@@ -100,6 +98,14 @@
     <!-- /.content -->
 </div>
 <script>
+    function isNumberKey(evt)
+    {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
     $(document).ready(function () {
         console.log("ready!");
         var saveButton = document.getElementById('saveSetBtn');

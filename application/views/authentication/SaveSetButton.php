@@ -1,4 +1,4 @@
-<a class="btn btn-app" id="saveSetBtn" title="Wieder hoch scrollen?"><i class="material-icons fa-save-my">save</i></a>
+<a  class="btn btn-app" id="saveSetBtn" title="Wieder hoch scrollen?"><i class="material-icons fa-save-my">save</i></a>
 <style>
     #saveSetBtn {
         position: fixed; /* Fixed/sticky position */
@@ -7,8 +7,8 @@
         z-index: 99; /* Make sure it does not overlap */
         color: white; /* Text color */
         cursor: pointer; /* Add a mouse pointer on hover */
-        background: #00A65A;
-        padding: 0;
+        background: #0CEA42;
+        border: transparent;
 
     }
 

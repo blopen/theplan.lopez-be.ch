@@ -15,25 +15,24 @@
     <!-- Main content -->
     <section class="content">
         <!-- Small boxes (Stat box) -->
-        <?=var_dump($sparkline)?>
         <div class="row">
 
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="info-box">
-        <span class="info-box-icon bg-<? if($trend['r_return_count']>0){echo 'green';}elseif($trend['r_return_count']==0) {echo 'orange'; } else { echo 'red';} ?>">
-          <i class="fa fa-caret-<? if($trend['r_return_count']>0){echo 'up';}elseif($trend['r_return_count']==0) {echo 'right'; } else { echo 'down';} ?>"></i>
+        <span class="info-box-icon bg-<? if($sparkline['trend']>0){echo 'green';}elseif($sparkline['trend']==0) {echo 'orange'; } else { echo 'red';} ?>">
+          <i class="fa fa-caret-<? if($sparkline['trend']>0){echo 'up';}elseif($sparkline['trend']==0) {echo 'right'; } else { echo 'down';} ?>"></i>
         </span>
                     <div class="info-box-content" style="position:relative;">
-                        <span class="info-box-text">Power of all exercises</span>
+                        <span class="info-box-text">Power of last 100 exercises</span>
                         <span class="info-box-number"> <small>   </small>
             <span class="info-box-chart" style="position:absolute; left:10px; right:10px;">
               <div class="sparkline" data-type="line" data-spot-Radius="3" data-highlight-Spot-Color="black"
                    data-min-Spot-Color="black" data-max-Spot-Color="black" data-line-Width="3"
                    data-spot-Color="black" data-offset="10" data-width="100%" data-height="60px"
-                   data-highlight-Line-Color="<? if($trend['r_return_count']>0){echo 'rgba(0, 166, 90, 0.3)';}elseif($trend['r_return_count']==0) {echo 'rgba(255, 133, 27, 0.3)'; } else { echo 'rgba(221, 75, 57, 0.3)';} ?>"
-                   data-line-Color="<? if($trend['r_return_count']>0){echo 'rgba(0, 166, 90, 0.3)';}elseif($trend['r_return_count']==0) {echo 'rgba(255, 133, 27, 0.3)'; } else { echo 'rgba(221, 75, 57, 0.3)';} ?>"
-                   data-fill-Color="<? if($trend['r_return_count']>0){echo 'rgba(0, 166, 90, 0.3)';}elseif($trend['r_return_count']==0) {echo 'rgba(255, 133, 27, 0.3)'; } else { echo 'rgba(221, 75, 57, 0.3)';} ?>">
-                <?=substr($sparkline,0,100)?>
+                   data-highlight-Line-Color="<? if($sparkline['trend']>0){echo 'rgba(0, 166, 90, 0.3)';}elseif($sparkline['trend']==0) {echo 'rgba(255, 133, 27, 0.3)'; } else { echo 'rgba(221, 75, 57, 0.3)';} ?>"
+                   data-line-Color="<? if($sparkline['trend']>0){echo 'rgba(0, 166, 90, 0.3)';}elseif($sparkline['trend']==0) {echo 'rgba(255, 133, 27, 0.3)'; } else { echo 'rgba(221, 75, 57, 0.3)';} ?>"
+                   data-fill-Color="<? if($sparkline['trend']>0){echo 'rgba(0, 166, 90, 0.3)';}elseif($sparkline['trend']==0) {echo 'rgba(255, 133, 27, 0.3)'; } else { echo 'rgba(221, 75, 57, 0.3)';} ?>">
+                <?=$sparkline['power']?>
               </div>
             </span>
           </span>

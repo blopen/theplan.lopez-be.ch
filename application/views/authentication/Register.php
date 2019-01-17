@@ -3,7 +3,22 @@
 		<div class="register-logo">
 			<a href="../../index2.html"><b>Admin</b>LTE</a>
 		</div>
+        <section>
+            <div class="modal fade" id="modViewDetailPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title task_title">Term</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Its not deffined</p>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+        </section>
 		<div class="register-box-body">
 			<p class="login-box-msg">
 				Register a new membership
@@ -37,7 +52,7 @@
 								<div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
 									<input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);">
 									<ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
-								</div> I agree to the <a href="#">terms</a> </label>
+								</div> I agree to the<a id="testbutton" class="btn" data-toggle="modal" data-target="#modViewDetailPassword" data-toggle="tooltip" title="Zahlungen" data-item-id="<?=1?>">terms</a> </label>
 						</div>
 					</div>
 					<!-- /.col -->
@@ -54,7 +69,7 @@
 
 			</div>
 
-			<a href="login.html" class="text-center">I already have a membership</a>
+			<!--<a href="login.html" class="text-center">I already have a membership</a>-->
 		</div>
 		<!-- /.form-box -->
 	</div>

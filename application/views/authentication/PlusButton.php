@@ -7,7 +7,8 @@
         z-index: 99; /* Make sure it does not overlap */
         color: white; /* Text color */
         cursor: pointer; /* Add a mouse pointer on hover */
-        background: #00A65A;
+        background: #0CEA42;
+        border: transparent;
 
     }
 

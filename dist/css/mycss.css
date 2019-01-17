@@ -4,3 +4,12 @@
 ol.breadcrumb {
     background: white !important;
 }
+.checkbox.icheck a{
+    color: white !important;
+}
+a{
+    color: #0c3a17 !important;
+}
+a .skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color:#0c3a17 !important;
+}

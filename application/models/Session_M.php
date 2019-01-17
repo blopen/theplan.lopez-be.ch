@@ -1,26 +1,33 @@
 <?php
-
+/*
+    Aufgabe: Model für users,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 Class Session_M extends CI_Model
 {
-
+    /*Default function*/
     public function __construct()
     {
         parent::__construct();
     }
-
+    /*Function: giebt alle Session zurück*/
     public function getAllSession()
     {
         return $this->db->get('session')->result_array();
     }
-
+    /*Function: giebt Session zurück per session_id*/
     public function getSessionById($id)
     {
         return $this->db->where(array('id' => intval($id)))->get('session')->result_array();
     }
+    /*Function: giebt Session zurück per User_id*/
     public function getSessionByUserId($id)
     {
         return $this->db->where(array('user_id' => intval($id)))->get('session')->result_array();
     }
+    /*Function: giebt Set zurück per User_id*/
     public function getSetById($id)
     {
         $this->db->select('*');
@@ -31,12 +38,13 @@ Class Session_M extends CI_Model
         $dataSet['exercise_id'] =$dataExcersise['id'];
         return $dataSet;
     }
-
+    /*Function: giebt Exercise zurück per Session_id*/
     public function getExersiceById($id)
     {
         $this->db->select('*');
         return $this->db->where(array('id' => intval($id)))->get('exercise')->result_array()[0];
     }
+    /*Function: giebt Exercise zurück des Users*/
     public function getExerciseOfSessionById($id)
     {
         $this->db->join('session_set', 'set.id = session_set.set_id');
@@ -46,7 +54,7 @@ Class Session_M extends CI_Model
         $sql = $this->db->last_query();
         echo $sql;
     }
-
+    /*Function: giebt Keygroup benutzer zurück*/
     public function getAllKeygroupUsers()
     {
         $this->db->join('users', 'keygroup_user.uid = users.id');
@@ -56,16 +64,15 @@ Class Session_M extends CI_Model
         $sql = $this->db->last_query();
         echo $sql;
     }
-
+    /*Function: löscht session*/
     public function delete($sid)
     {
         $this->db->where('id', $sid);
         if ($this->db->delete('session')) {
-            //$this -> db -> where('kid', $kid);
-            //$this -> db -> delete('password');
             echo $this->db->last_query();
         }
     }
+    /*Function: löscht set*/
     public function deleteSet($eid)
     {
         $this->db->where('id', $eid);
@@ -75,7 +82,7 @@ Class Session_M extends CI_Model
             echo $this->db->last_query();
         }
     }
-
+    /*Function: speichert session*/
     public function save($data)
     {
         if (!intval($data['id'])) {
@@ -105,7 +112,7 @@ Class Session_M extends CI_Model
             return $data['id'];
         }
     }
-
+    /*Function: speichert set*/
     public function saveSet($data)
     {
         if (!intval($data['set_id'])) {
@@ -136,7 +143,8 @@ Class Session_M extends CI_Model
 
 
     }
-    /*SELECT * FROM exercise e JOIN `set` s on e.id=s.exercise_id
+    /*Join für Char mit allen übungen des users:
+     * SELECT * FROM exercise e JOIN `set` s on e.id=s.exercise_id
                                 join session_set ss on ss.set_id=s.id
                                 join `session` se on ss.session_id=se.id
                                 WHERE e.user_id = 5*/
@@ -145,24 +153,37 @@ Class Session_M extends CI_Model
         $this->db->join('set', 'exercise.id = set.exercise_id ');
         $this->db->join('session_set', 'session_set.set_id = set.id');
         $this->db->join('session', 'session_set.session_id = session.id');
-        return $this->db->where(array('exercise.user_id' => intval($id)))->get('exercise')->result_array();
-
-        //$sql = $this->db->last_query();
-        //echo $sql;
+        return $this->db->where(array('exercise.user_id' => intval($id)))->get('exercise',100)->result_array();
     }
+    /*Function: gibt die Daten für den Char zürück*/
     public function  getSparklineInfosOfAllExercises($id)
     {
+     //Join im getExersiceOfUser
         $dataExerciose  = $this -> getExersiceOfUser($id);
         $sparklineInfos;
         $sparklinestring;
+        $trend;
+        //rechnen der Werte
+        $maxIndex =  count($dataExerciose);
         foreach ($dataExerciose as $key => $values){
               $sparklineInfos[$key]['name'] = $dataExerciose[$key]['name'];
               $power = ($dataExerciose[$key]['weight'] * $dataExerciose[$key]['repetition']);
               $sparklinestring .= $power.",";
+              if($key == $maxIndex -1){
+                  //für den Trend
+                  if($dataExerciose[$key]['weight'] * $dataExerciose[$key]['repetition'] > $dataExerciose[$key-1]['weight'] * $dataExerciose[$key-1]['repetition'])
+                  {
+                      $trend = (($dataExerciose[$key]['weight'] * $dataExerciose[$key]['repetition'])* 100 / ($dataExerciose[$key -1]['weight'] * $dataExerciose[$key-1]['repetition']));
+                  }else{
+                      $trend = -(($dataExerciose[$key-1]['weight'] * $dataExerciose[$key-1]['repetition'])*100 / ($dataExerciose[$key]['weight'] * $dataExerciose[$key]['repetition']));
+                  }
+
+              }
                 //array_push($sparkline,$power.",");
         }
-        $sparklineInfos['power'] =$sparklinestring;
-        return $sparklineInfos['power']; //['weight'][repetition] [name]
+        $sparklineInfos['power'] = rtrim($sparklinestring,",");
+        $sparklineInfos['trend'] = $trend;
+        return $sparklineInfos; //['weight'][repetition] [name]
     }
 
 }

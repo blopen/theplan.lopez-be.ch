@@ -1,8 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/*
+    Aufgabe: Regristartion,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 class Register extends CI_Controller
 {
+    /*constructor for all uses elemets*/
     function __construct()
     {
         parent::__construct();
@@ -12,7 +18,7 @@ class Register extends CI_Controller
         $this->load->model('User_M');
 
     }
-
+    /*Default function: Ruf die benötigten Daten für die Regristaration auf*/
     public function index()
     {
         $this->load->view('layout/Header_login');
@@ -22,7 +28,7 @@ class Register extends CI_Controller
         $map = directory_map('./mydirectory/');
 
     }
-
+    /*Function: Wechselt das Regristriert*/
     function registration()
     {
         $session_data = $this->session->userdata;
@@ -49,7 +55,7 @@ class Register extends CI_Controller
             $link = '<a href="' . $url . '">' . $url . '</a>';
             $message = '';
             $message .= '<h1> Hello ' . $clean['firstname'] . ' ' . $clean['lastname'] . '</h1>';
-            $message .= '<strong>You are now an memer of theplan</strong><br>';
+            $message .= '<strong>You are now an member of theplan</strong><br>';
             $message .= '<strong>Please click to finish the prozess:</br></strong> ' . $link;
             /*Sending Mail theplan mail pw tp12345!! theplan.mail@gmail.com*/
             $config = Array('protocol' => 'sendmail', 'smtp_host' => 'ssl://smtp.googlemail.com', 'smtp_port' => 465, 'smtp_user' => 'theplan.mail@gmail.com',
@@ -63,10 +69,7 @@ class Register extends CI_Controller
             $this->email->bcc('');
             $this->email->subject('Completed regristition for Cloudly');
             $this->email->message($message);
-            //$this->email->send();
             $result = $this->email->send();
-            //echo $this -> email -> print_debugger();
-            //echo var_dump($result);
 
             if ($message != null && $result) {
                 $this->load->view('layout/Header_login');
@@ -81,13 +84,10 @@ class Register extends CI_Controller
             $this->load->view('layout/Header_login');
             $this->load->view('authentication/Register');
             $this->load->view('layout/Footer_login');
-
             echo '<script>alert("Please check the input.")</script>';
-
         }
-
     }
-
+    /*Function: Wechselt Aktivirungstocken erstellt*/
     public function complete()
     {
         $this->load->library('form_validation');
@@ -97,7 +97,6 @@ class Register extends CI_Controller
         $cleanToken = $this->security->xss_clean($token);
 
         $user_info = $this->User_M->isTokenValid($cleanToken);
-        //either false or array();
 
         if (!$user_info) {
             $this->session->set_flashdata('flash_message', 'Token is invalid or expired');
@@ -105,9 +104,6 @@ class Register extends CI_Controller
         }
         $array = json_decode(json_encode($user_info), true);
         $this->User_M->updateUserInfo($array);
-
-
-        //var_dump($this->s3->putBucket("usr".$bucket_name, ACL_PUBLIC_READ ));
 
         echo '<script>alert("Congratulation you are now an Member.")</script>';
         $this->load->view('layout/Header_login');

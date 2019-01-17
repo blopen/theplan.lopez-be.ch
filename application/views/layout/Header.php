@@ -20,7 +20,7 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="<?= base_url() . index_page() ?>dist/css/mycss.css" type="text/css">
-    <link rel="icon" href="<?= base_url() ?>favicon.ico" type="image/ico">
+    <link rel="icon" href="https://www.materialui.co/materialIcons/places/fitness_center_black_192x192.png" type="image/png">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -36,6 +36,7 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?= base_url() ?>dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>dist/css/thepaln_lopez_be_ch.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,7 +57,7 @@
         <!-- Logo -->
         <a href="#" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><img src="<?= base_url() ?>favicon.ico" type="image/ico"/></span>
+            <span class="logo-mini"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg></span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>theplan</b></span>
         </a>
@@ -129,7 +130,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="<?= base_url() . index_page(); ?>Profile" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="<?= base_url() . index_page(); ?>/Home/logout"
@@ -157,7 +158,6 @@
                 </div>
                 <div class="pull-left info">
                     <p><?= $firstname . " " . $lastname ?></p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
             <!-- search form -->
@@ -181,7 +181,7 @@
             </span>
                     </a>
                 </li>
-                <li class="active treeview">
+                <li>
                     <a href="<?= base_url() . index_page(); ?>Profile">
                         <i class="fa fa-user"></i> <span>Profile</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
@@ -202,7 +202,7 @@
                 </li>
                 <li class="treeview">
                 </li>
-                <li><a href="<?= base_url() . index_page(); ?>/Home/logout"><i class="fa fa-circle-o text-red"></i>
+                <li><a href="<?= base_url() . index_page(); ?>/Home/logout"><i class="fa fa-circle-o text-white"></i>
                         <span>Logout</span></a></li>
             </ul>
         </section>

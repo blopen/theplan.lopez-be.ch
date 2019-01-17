@@ -1,7 +1,12 @@
 <?php
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
+/*
+    Aufgabe: Set bearbeiten,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 class Set extends CI_Controller {
     /*constructor for all uses elemets*/
 
@@ -16,12 +21,8 @@ class Set extends CI_Controller {
         $this -> load -> helper('form');
         $this -> load -> helper('url');
         $this -> load -> library('session', 'form_validation');
-        /*debuggingtool: echo "<pre>";
-        var_dump($value["Size"]) lol;
-        die;*/
-
     }
-
+    /*Default function: Ruf die benötigten Daten für die Set auf*/
     function index() {
         $session_data = $this -> session -> userdata('userData');
         $data['email'] = $session_data['email'];
@@ -33,8 +34,8 @@ class Set extends CI_Controller {
         $this -> load -> view('authentication/Set');
         $this -> load -> view('authentication/PlusSetButton');
         $this -> load -> view('layout/Footer');
-        //
     }
+    /*Function: Bearbeiten einer Set*/
     function edit() {
         $sessionid = $this->uri->segment(3);//set auch so machen
         $session_data = $this -> session -> userdata('userData');
@@ -44,13 +45,14 @@ class Set extends CI_Controller {
         $data['log_date'] = $session_data['log_date'];
         $data['session'] = $this->Session_M->getSessionById($sessionid);
         $data['set'] = $this->Session_M->getExerciseOfSessionById($sessionid);
-        print_r($data);
+        //print_r($data);
         $this -> load -> view('layout/Header', $data);
         $this -> load -> view('authentication/Set');
         $this -> load -> view('authentication/PlusSetButton');
         $this -> load -> view('layout/Footer');
         //
     }
+    /*Function: Hinzufügen einer Set*/
     function add() {
         $sessionid = $this->uri->segment(3);//set auch so machen
         $session_data = $this -> session -> userdata('userData');
@@ -67,6 +69,7 @@ class Set extends CI_Controller {
         $this -> load -> view('layout/Footer');
         //
     }
+    /*Function: Betrachten einer Set*/
     function watch() {
         $setid = $this->uri->segment(3);//set auch so machen
         $seessionid = $this->uri->segment(4);//set auch so machen
@@ -85,8 +88,8 @@ class Set extends CI_Controller {
         $this -> load -> view('authentication/Set_add');
         $this -> load -> view('authentication/SaveSetButton');
         $this -> load -> view('layout/Footer');
-        //
     }
+    /*Function: Speichern eines Set*/
     public function save() {
         $setData = $this -> input -> post();
         $session_id = $this -> Session_M -> saveSet($setData);
@@ -94,6 +97,7 @@ class Set extends CI_Controller {
 
 
     }
+    /*Function: Löschen eines Set*/
     public function delete($sid) {
         $setid = $this->uri->segment(3);//set auch so machen
         $seessionid = $this->uri->segment(4);//set auch so machen
@@ -102,18 +106,4 @@ class Set extends CI_Controller {
 
 
     }
-
-    public function do_upload() {
-        $session_data = $this -> session -> userdata('userData');
-        $input = $this -> input -> post("userfile");
-        echo $this -> Upload_M -> do_upload($input);
-
-    }
-
-    function logout() {
-        $this -> session -> unset_userdata('userData');
-        session_destroy();
-        redirect('login', 'refresh');
-    }
-
 }

@@ -35,7 +35,7 @@
 				<body>
 
 					<div id="container">
-						<div class="box box-primary">
+						<div class="box box-default">
 							<div class="box-body box-profile">
 								<img class="profile-user-img img-responsive img-circle" src="<?=base_url()?>dist/img/IchAug2016.jpg" alt="User profile picture">
 
@@ -58,7 +58,7 @@
 								</ul>
 								<a id="showPasswordChange" class="btn btn-primary btn-block"><b>Change Passwort</b></a>
 								<a id="showMailChange" class="btn btn-primary btn-block"><b>Change Mail</b></a>
-								<a id="showImageChange" class="btn btn-primary btn-block"><b>Change Profile Image</b></a>
+								<!--<a id="showImageChange" class="btn btn-primary btn-block"><b>Change Profile Image</b></a>-->
 							</div>
 							<!-- /.box-body -->
 								

@@ -3,10 +3,9 @@
     <section class="content-header">
         <h1>
             Set
-            <small>Traning panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Theplan</a></li>
+            <li><a href="#"><i class="fa fa-calendar"></i> Theplan</a></li>
             <li class="active">Set</li>
         </ol>
     </section>
@@ -23,7 +22,7 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body table-responsive">
-                            <table class="table table-bordered x">
+                            <table class="table table-bordered">
                                 <tbody>
                                 <tr>
                                     <th>Setname</th>
@@ -40,17 +39,17 @@
                                             <?= $value['weight'] ?> Kg
                                         </td>
                                         <td>
-                                            <a href="https://theplan.lopez-be.ch/Set/delete/<?=$value['set_id']?>/<?=$session[0]['id']?>">
-                                                <i class="material-icons">
+                                            <a>
+                                                <button class="deleteSet" value="<?= $value['set_id'] ?>" ><i class="material-icons">
                                                     delete
-                                                </i>
+                                                </i></button>
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="https://theplan.lopez-be.ch/Set/watch/<?=$value['set_id']?>/<?=$session[0]['id']?>">
+                                            <a href="https://theplan.lopez-be.ch/Set/watch/<?=$value['set_id']?>/<?=$session[0]['id']?>"><button>
                                                 <i class="material-icons " >
                                                     visibility
-                                                </i>
+                                                </i></button>
                                             </a>
                                         </td>
                                     </tr>
@@ -80,6 +79,10 @@
     <!-- /.content -->
 </div>
 <style>
+    button{
+        BACKGROUND-COLOR: TRANSPARENT;
+        border-radius: 50%;
+    }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
         i.material-icons {
             font-size: -webkit-xxx-large;
@@ -91,7 +94,6 @@
             width: 50%;
             margin-top: 7%;
         }
-
         a i.material-icons {
             color: black;
             position: relative;
@@ -99,18 +101,6 @@
             cursor: pointer;
             margin-top: 10%;
 
-        }
-
-        #datepicker {
-            margin-top: 31%;
-        }
-
-        .input-kalories {
-            margin-top: 3%;
-        }
-
-        .form-control.input-md {
-            margin-top: 31%;
         }
     }
 
@@ -122,8 +112,28 @@
         $('#plusSetBtn').click(function () {
             window.location = 'https://theplan.lopez-be.ch/Set/add/' + id;
         });
-        $(function () {
-            $("#datepicker").datepicker();
+        $('.deleteSet').click(function () {
+            event.preventDefault();
+            var id = this.value;
+            console.log("ready!"+id);
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this exercise!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Poof! Your exercise has been deleted!", {
+                            icon: "success",
+                        });
+                        window.location = "https://theplan.lopez-be.ch/Set/delete/"+id;
+                    } else {
+                        swal("Your exercise is safe!");
+                    }
+                });
+            $.fn.modal.Constructor.prototype.enforceFocus = function() {};
         });
     });
 </script>

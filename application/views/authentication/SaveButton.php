@@ -7,17 +7,23 @@
         z-index: 99; /* Make sure it does not overlap */
         color: white; /* Text color */
         cursor: pointer; /* Add a mouse pointer on hover */
-        background: #00A65A;
-        padding: 0;
+        background: #0CEA42;
+        border: transparent;
 
     }
 
     #saveBtn:hover {
         background-color: #017a41; /* Add a dark-grey background on hover */
     }
-    .material-icons.fa-save-my{
-        position: relative;
+
+    .material-icons.fa-save-my {
         color: white;
-        top: -3%;
+        position: relative;
+        top: -50%;
+    @media (min-width: 991px) {
+        position: inherit;
+        top: 0;
+    }
+
     }
 </style>

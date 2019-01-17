@@ -2,23 +2,32 @@ ol.breadcrumb {
     background: white !important;
 }
 body{
-    font-family: "Helvetica Neue";
+    font-family: 'Exo 2', sans-serif;
+}
+a{
+    color: #0c3a17 !important;
+}
+small{
+    color: white;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+    background-color: white!important;
 }
 .login-page,.register-page{
-    background: #0bea43;
+    background: #007F2D;
 }
 
 .login-box-body, .register-box-body {
     background: #23a042;
-    
+
 }
 
 .btn-primary {
-    background-color: #0bea43;
+    background-color: #007F2D;
     border-color: #23a042;
 }
 .btn-primary:hover {
-    border-color: #0bea43;
+    border-color: #007F2D;
     background-color: #23a042;
 }
 
@@ -28,14 +37,14 @@ body{
     z-index: 800;
 }
 .skin-blue .main-header .navbar {
-    background-color: #0bea43 !important;
+    background-color: #007F2D !important;
 }
 .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-    background-color: #23a042;
+    background-color: #00BD43;
 }
 .skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a {
     color: #fff;
-    background: #0bea43;
+    background: #007F2D;
     border-left-color: #23a042;
 }
 .skin-blue .sidebar-menu>li.header {
@@ -44,7 +53,7 @@ body{
 }
 
 .btn-success {
-    background-color: #0bea43;
+    background-color: #007F2D;
     border-color: #23a042;
 }
 
@@ -60,14 +69,16 @@ body{
 }
 
 a.sidebar-toggle:hover {
-    background-color: #0bea43;
+    background-color: #007F2D;
     border-color: #23a042;
 }
 
 .skin-blue .main-header li.user-header {
-    background-color: #0bea43;
+    background-color: #007F2D;
 }
-
+nav .skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color:#0c3a17 ;
+}
 .skin-blue .sidebar-menu>li>.treeview-menu{
     margin: 0 1px;
     background: #23a042 !important;

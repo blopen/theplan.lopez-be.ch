@@ -1,7 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/*
+    Aufgabe: Profil bearbeiten,
+    Autor: Nelson Lopez,
+    Version: 1.0,
+    Datum: 04.12.24
+*/
 class Profile extends CI_Controller {
+    /*constructor for all uses elemets*/
 	function __construct() {
 		parent::__construct();
 		$this -> load -> helper('form');
@@ -11,7 +17,7 @@ class Profile extends CI_Controller {
 		$this -> load -> library('session', 'form_validation');
 		$this -> load -> database();
 	}
-
+    /*Default function: Ruf die benötigten Daten für den User auf*/
 	public function index() {
 		$session_data = $this -> session -> userdata('userData');
 		$data['email'] = $session_data['email'];
@@ -24,7 +30,7 @@ class Profile extends CI_Controller {
 		$this -> load -> helper('directory');
 		$map = directory_map('./mydirectory/');
 	}
-
+    /*Function: Wechselt das Passwort des Users*/
 	function changePassword() {
 		$session_data = $this -> session -> userdata('userData');
 		$this -> load -> library('form_validation');
@@ -32,8 +38,7 @@ class Profile extends CI_Controller {
 		$this -> load -> model('User_M');
 		$id = $session_data['id'];
 		$newpassword = $this->input->post('password2');
-				/*set validation rules*/
-		
+		/*set validation rules*/
 		$this -> form_validation -> set_rules('password', 'Password', 'callback_check_database');
 		$this -> form_validation -> set_rules('password1', 'Password1', 'trim|required');
 		$this -> form_validation -> set_rules('password2', 'Password2', 'trim|required|matches[password1]');
@@ -43,10 +48,9 @@ class Profile extends CI_Controller {
 		} else {
 			$this -> User_M -> updateUserPassword($id, $newpassword);
 			echo 'done';
-
 		}
-
 	}
+    /*Function: Wechselt das Mail des Users*/
 	function changeMail() {
 		$session_data = $this -> session -> userdata('userData');
 		$this -> load -> library('form_validation');
@@ -64,11 +68,10 @@ class Profile extends CI_Controller {
 		} else {
 			$this -> User_M -> updateUserMail($id, $newMail);
 			echo 'done';
-
 		}
-
 	}
-		public function setProfileImage() { 
+    /*Function: Wechselt das Image des Users(nicht fertig)*/
+	public function setProfileImage() {
 		$session_data = $this -> session -> userdata('userData');
 		$input = $this -> input -> post("userfileimge");
 		var_dump($input);
@@ -78,10 +81,8 @@ class Profile extends CI_Controller {
 		}else{
 			echo 'not work';
 		}
-		
-
 	}
-
+    /*Function: überprüft die user Informationen*/
 	function check_database($password) {
 		$session_data = $this -> session -> userdata('userData');
 		$email = $session_data['email'];
@@ -95,8 +96,5 @@ class Profile extends CI_Controller {
 			$this -> form_validation -> set_message('check_database', 'Invalid Password');
 			return false;
 		}
-		
-
 	}
-
 }
